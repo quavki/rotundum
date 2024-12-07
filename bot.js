@@ -29,16 +29,28 @@ function calculateDailyMVP() {
         <p>M = ${M}, V = ${V}, P = ${P}</p>
         <p>Hours (Binary): ${hoursBinary}, Minutes (Binary): ${minutesBinary}</p>
         <p>Hours (ASCII): ${hoursAscii}, Minutes (ASCII): ${minutesAscii}</p>
-    `;
+    `;`i think it is important for me first that i ensure iit makes sense 
+    so i want it to be like 11pm, 6am, 2pm ...`
 }
+`how would i like the output 
+Date - day/month/year
+MVP = X - X - X
+Time - XX:XX
+
+at 11pm - 
+at 6am - 
+at 2pm - 
+
+
+`
 
 // Function to calculate monthly MVP sequences
 function calculateMonthlyMVP(year) {
     let output = '';
     for (let month = 1; month <= 12; month++) {
-        const V = reduceToBelow23(month);
+        const V = reduceToBelow23(month+1);
         const M = reduceToBelow23(month + year);
-        const P = reduceToBelow23(month + 1);
+        const P = reduceToBelow23(month);
 
         output += `<p>Month ${month}: MVP = ${M} - ${V} - ${P}</p>`;
     }
