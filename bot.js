@@ -48,7 +48,7 @@ at 2pm -
 function calculateMonthlyMVP(year) {
     let output = '';
     for (let month = 1; month <= 12; month++) {
-        const V = reduceToBelow23(month+1);
+        const V = reduceToBelow23(month + 1);
         const M = reduceToBelow23(month + year);
         const P = reduceToBelow23(month);
 
